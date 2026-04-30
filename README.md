@@ -1,0 +1,2 @@
+# ameritrust-companion-model
+chatbot
