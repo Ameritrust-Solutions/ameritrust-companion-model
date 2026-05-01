@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AmeriTrust Companion Model</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="host-app" aria-label="Example benefits application">
+      <header class="host-header">
+        <a class="brand host-brand" href="#" aria-label="AmeriTrust">
+          <span class="brand-mark" aria-hidden="true">AT</span>
+          <span>
+            <strong>AmeriTrust</strong>
+            <small>Example application flow</small>
+          </span>
+        </a>
+        <span class="state-chip">State portal handoff enabled</span>
+      </header>
+
+      <section class="application-step" aria-label="Application step">
+        <div class="step-header">
+          <div>
+            <p class="eyebrow">Step 3 of 6</p>
+            <h1>Income information</h1>
+            <p class="lede">The companion model follows the applicant through each step and only uses the current screen context.</p>
+          </div>
+          <span class="progress-label">58% complete</span>
+        </div>
+
+        <div class="progress-bar" aria-label="Application is 58 percent complete">
+          <span style="width: 58%"></span>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            Monthly household income
+            <input type="text" value="$2,480" aria-label="Monthly household income" />
+          </label>
+          <label>
+            Income source
+            <select aria-label="Income source">
+              <option>Employment wages</option>
+              <option>Self-employment</option>
+              <option>Benefits or assistance</option>
+            </select>
+          </label>
+          <label class="wide">
+            Proof of income
+            <div class="upload-box">Upload a document in the state portal. Do not put document details in chat.</div>
+          </label>
+        </div>
+
+        <div class="step-actions">
+          <button class="secondary-button" type="button">Back</button>
+          <button class="primary-button" type="button">Save and continue</button>
+        </div>
+      </section>
+    </main>
+
+    <aside class="companion" aria-label="AmeriTrust companion helper">
+      <button class="companion-launcher" id="companionToggle" type="button" aria-expanded="true" aria-controls="companionPanel">
+        <span class="brand-mark" aria-hidden="true">AT</span>
+        <span>Helper</span>
+      </button>
+
+      <section class="chat-card" id="companionPanel">
+        <header class="chat-header">
+          <a class="brand" href="#" aria-label="AmeriTrust Helper Chat">
+            <span class="brand-mark" aria-hidden="true">AT</span>
+            <span>
+              <strong>AmeriTrust</strong>
+              <small>Application Helper</small>
+            </span>
+          </a>
+          <button class="close-button" id="closeCompanion" type="button" aria-label="Minimize helper">Minimize</button>
+        </header>
+
+        <div class="context-strip" aria-label="Current application context">
+          <span>Income step</span>
+          <span>General guidance only</span>
+          <span>No PII or PHI</span>
+        </div>
+
+        <div class="conversation" id="conversation" aria-live="polite">
+          <article class="message assistant-message">
+            <span class="avatar">AT</span>
+            <div class="message-body">
+              <p>Hi, I can explain this step and point you to state help. Please do not enter personal, medical, or case-specific details in this chat.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="suggestions" aria-label="Suggested questions">
+          <button type="button" data-prompt="What do I need to do next?">What is next?</button>
+          <button type="button" data-prompt="What proof of income can I use?">Proof of income</button>
+          <button type="button" data-prompt="I need state assistance">State assistance</button>
+        </div>
+
+        <form class="composer" id="promptForm">
+          <label class="sr-only" for="promptInput">Message AmeriTrust helper</label>
+          <input id="promptInput" name="prompt" type="text" placeholder="Ask a general question. Do not enter personal or medical details." autocomplete="off" />
+          <button class="primary-button" type="submit">Send</button>
+        </form>
+      </section>
+    </aside>
+
+    <script src="app.js"></script>
+  </body>
+</html>
