@@ -465,6 +465,22 @@ select {
     bottom: 14px;
   }
 
+  .companion:not(.expanded) .chat-card {
+    display: none;
+  }
+
+  .companion:not(.expanded) .companion-launcher {
+    display: inline-flex;
+  }
+
+  .companion.expanded .chat-card {
+    display: flex;
+  }
+
+  .companion.expanded .companion-launcher {
+    display: none;
+  }
+
   .chat-card {
     width: calc(100vw - 28px);
     height: min(500px, 64vh);

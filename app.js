@@ -104,11 +104,13 @@ promptForm.addEventListener("submit", (event) => {
 
 closeCompanion.addEventListener("click", () => {
   companion.classList.add("collapsed");
+  companion.classList.remove("expanded");
   companionToggle.setAttribute("aria-expanded", "false");
 });
 
 companionToggle.addEventListener("click", () => {
   companion.classList.remove("collapsed");
+  companion.classList.add("expanded");
   companionToggle.setAttribute("aria-expanded", "true");
   promptInput.focus();
 });
