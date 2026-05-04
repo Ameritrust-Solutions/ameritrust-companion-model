@@ -62,20 +62,36 @@ button {
   text-decoration: none;
 }
 
-.brand-mark {
+.host-brand {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.brand-logo {
+  display: block;
+  width: min(300px, 58vw);
+  height: auto;
+}
+
+.brand-tile {
   display: grid;
   place-items: center;
   width: 42px;
   height: 42px;
+  overflow: hidden;
   border-radius: 8px;
-  color: #ffffff;
-  background: var(--navy);
-  font-weight: 800;
+  background: #ffffff;
 }
 
-.chat-header .brand-mark {
+.brand-tile img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+.chat-header .brand-tile {
   border: 1px solid rgba(255, 255, 255, 0.32);
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .brand strong,
@@ -249,11 +265,14 @@ select {
   box-shadow: var(--shadow);
 }
 
-.companion-launcher .brand-mark {
+.companion-launcher .brand-tile {
   width: 38px;
   height: 38px;
   border: 1px solid rgba(255, 255, 255, 0.32);
-  background: rgba(255, 255, 255, 0.1);
+}
+
+.companion-launcher .brand-tile img {
+  width: 136px;
 }
 
 .chat-card {
@@ -327,14 +346,23 @@ select {
   place-items: center;
   width: 34px;
   height: 34px;
+  overflow: hidden;
   border-radius: 50%;
   color: #ffffff;
-  background: var(--navy);
+  background: #ffffff;
+  border: 1px solid var(--line);
   font-size: 0.68rem;
   font-weight: 800;
 }
 
+.avatar img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
 .user-message .avatar {
+  border-color: transparent;
   background: var(--gold);
 }
 
